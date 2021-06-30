@@ -1,0 +1,301 @@
+
+@import "variables";
+@import "mixins";
+
+
+// ------------------Border box------------------
+html{
+	box-sizing: border-box;
+}
+*, *:before, *:after{    
+	box-sizing: inherit;
+}
+
+// ------------------REM------------------
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 16px;
+}
+
+// ------------------Generales------------------
+body{
+    background: $morado;
+    font-size: 1.6rem;
+    line-height: 1.5; //No se le pone px o rem, porque sin unidad de medida lo toma a lo que viene ser la base del font-size que en este caso es 1.6rem
+}
+h1, h2, h3{
+    text-align: center;
+    color: $naranja;
+    font-family: $fuente_principal;
+}
+h1{
+    font-size: 4rem;
+}
+h2{
+    font-size: 3.2rem;
+}
+h3{
+    font-size: 2.4rem;
+}
+p{
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: $blanco;
+}
+a{
+    text-decoration: none;
+}
+img{
+    width: 100%;
+}
+.contenedor{
+    margin: 0 auto;
+    max-width: 120rem;
+}
+
+// ------------------Header------------------
+.header{
+    display: flex;
+    justify-content: center;
+    .header_logo{
+        margin: 3rem 0;
+    }
+}
+
+// ------------------Navegador------------------
+.navegador{
+    background: $moradoOscuro;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    // Para separar enlaces, pero no soporta safari
+    // gap: 2rem;
+    .navegador_enlace{
+        font-family: $fuente_principal;
+        color: $blanco;
+        font-size: 3rem;
+        // Para separar enlaces
+        margin-right: 2rem;
+        &:last-of-type{
+            // Para eliminar margin-right del último enlace
+            margin-right: 0;
+        }
+        &:hover{
+            color: $naranja;
+        }
+    }
+    .navegador_enlace-activo{
+        color: $naranja;
+    }
+}
+
+
+
+// ------------------Productos------------------
+.contenedor{
+    .productos{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        @include tablet{
+            grid-template-columns: repeat(3, 1fr);
+        }
+        .producto{
+            background: $moradoOscuro;
+            padding: .8rem;
+            .producto_informacion{
+                .producto_informacion_nombre{
+                    font-size: 4rem;
+                }
+                .producto_indormacion_precio{
+                    font-size: 2.8rem;
+                    color: $naranja;
+                }
+                .producto_informacion_nombre,
+                .producto_indormacion_precio{
+                    font-family: $fuente_principal;
+                    text-align: center;
+                    margin: 1rem 0;
+                    line-height: 1.2;
+                }
+            }
+        }
+        .grafico{
+            // Tamaño que debe de tener cada gráfico
+            min-height: 30rem;
+            // Para que los graficos se centren
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .polos{
+            background-image: url(../images/grafico1.jpg);
+            // Para que se posicione
+            grid-row: 2/3;
+            grid-column: 1/3;
+        }
+        .node{
+            background-image: url(../images/grafico2.jpg);
+            // Para que se posicione
+            grid-row: 8/9;
+            grid-column: 1/3;
+            @include tablet{
+                grid-row: 5/6;
+                grid-column: 2/4;
+            }
+        }
+    }
+}
+
+
+// ------------------Footer------------------
+.footer{
+    background: $moradoOscuro;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    p{
+        text-align: center;
+        font-family: $fuente_principal;
+        font-size: 2.2rem;
+    }
+}
+
+// ----------------------/////Página - nosotros/////----------------------
+
+.nosotros{
+    
+    .nosotros_info{
+        display: grid;
+        grid-template-rows: repeat(2, auto);  //Auto porque si se le coloca 1fr está dejando espacio
+        @include tablet{
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 2rem;
+        }
+        .nosotros_info_texto{
+            padding: 0 2rem;
+            @include tablet{
+                padding: 0;
+            }
+            p{
+                text-align: justify;
+            }
+        }
+        .nosotros_info_imagen{
+            grid-row: 1/2;
+            @include tablet{
+                grid-column: 2/3;
+            }
+        }
+    }
+}
+.contenedor{
+    .comprar{
+        .comprar_bloques{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            @include tablet{
+                grid-template-columns: repeat(4, 1fr);
+            }
+            .bloque{
+                text-align: center;
+                h3{
+                    margin: 0;
+                }
+                p{
+                    padding: 0 2rem;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+// ----------------------/////Producto - compra o producto/////----------------------
+.compra{
+    @include tablet{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+    .compra_contenido{
+        p{
+            padding: 0 2rem;
+            text-align: justify;
+            @include tablet{
+                padding: 0;
+            }
+        }
+        .formulario{
+            padding: 0 2rem;
+            gap: 2rem;
+            @include telefono{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+            }
+            @include tablet{
+                padding: 0;
+            }
+            .formulario_dato{
+                border: 1rem solid $moradoOscuro;
+                background: transparent;
+                color: $blanco;
+                font-size: 2rem;
+                font-family: Arial, Helvetica, sans-serif;
+                padding: 1rem;
+                width: 100%;
+                margin-bottom: 2rem;
+                @include telefono{
+                    margin-bottom: 0;
+                }
+            }
+            .formulario_boton{
+                background: $naranja;
+                border: none;
+                font-size: 2rem;
+                font-family: $fuente_principal;
+                padding: 2rem;
+                width: 100%;
+                // Para que el boton ocupe todo el ancho
+                grid-column: 1/3;
+                // Da efecto al momento que cambia el color en el hover
+                transition: background .3s ease;
+                &:hover{
+                    cursor: pointer;
+                    background: $naranjaOscuro
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

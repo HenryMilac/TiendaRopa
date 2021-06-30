@@ -1,0 +1,365 @@
+/* line 7, scss/style.scss */
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 10, scss/style.scss */
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+/* line 15, scss/style.scss */
+html {
+  font-size: 62.5%;
+}
+
+/* line 18, scss/style.scss */
+body {
+  font-size: 16px;
+}
+
+/* line 23, scss/style.scss */
+body {
+  background: #9C27B0;
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+/* line 28, scss/style.scss */
+h1, h2, h3 {
+  text-align: center;
+  color: #FFCE00;
+  font-family: "Staatliches", cursive;
+}
+
+/* line 33, scss/style.scss */
+h1 {
+  font-size: 4rem;
+}
+
+/* line 36, scss/style.scss */
+h2 {
+  font-size: 3.2rem;
+}
+
+/* line 39, scss/style.scss */
+h3 {
+  font-size: 2.4rem;
+}
+
+/* line 42, scss/style.scss */
+p {
+  font-size: 1.8rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #FFF;
+}
+
+/* line 47, scss/style.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 50, scss/style.scss */
+img {
+  width: 100%;
+}
+
+/* line 53, scss/style.scss */
+.contenedor {
+  margin: 0 auto;
+  max-width: 120rem;
+}
+
+/* line 59, scss/style.scss */
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+/* line 62, scss/style.scss */
+.header .header_logo {
+  margin: 3rem 0;
+}
+
+/* line 68, scss/style.scss */
+.navegador {
+  background: #89119D;
+  padding: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+/* line 75, scss/style.scss */
+.navegador .navegador_enlace {
+  font-family: "Staatliches", cursive;
+  color: #FFF;
+  font-size: 3rem;
+  margin-right: 2rem;
+}
+
+/* line 81, scss/style.scss */
+.navegador .navegador_enlace:last-of-type {
+  margin-right: 0;
+}
+
+/* line 85, scss/style.scss */
+.navegador .navegador_enlace:hover {
+  color: #FFCE00;
+}
+
+/* line 89, scss/style.scss */
+.navegador .navegador_enlace-activo {
+  color: #FFCE00;
+}
+
+/* line 98, scss/style.scss */
+.contenedor .productos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+@media only screen and (min-width: 768px) {
+  /* line 98, scss/style.scss */
+  .contenedor .productos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* line 105, scss/style.scss */
+.contenedor .productos .producto {
+  background: #89119D;
+  padding: .8rem;
+}
+
+/* line 109, scss/style.scss */
+.contenedor .productos .producto .producto_informacion .producto_informacion_nombre {
+  font-size: 4rem;
+}
+
+/* line 112, scss/style.scss */
+.contenedor .productos .producto .producto_informacion .producto_indormacion_precio {
+  font-size: 2.8rem;
+  color: #FFCE00;
+}
+
+/* line 116, scss/style.scss */
+.contenedor .productos .producto .producto_informacion .producto_informacion_nombre,
+.contenedor .productos .producto .producto_informacion .producto_indormacion_precio {
+  font-family: "Staatliches", cursive;
+  text-align: center;
+  margin: 1rem 0;
+  line-height: 1.2;
+}
+
+/* line 125, scss/style.scss */
+.contenedor .productos .grafico {
+  min-height: 30rem;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* line 133, scss/style.scss */
+.contenedor .productos .polos {
+  background-image: url(../images/grafico1.jpg);
+  grid-row: 2/3;
+  grid-column: 1/3;
+}
+
+/* line 139, scss/style.scss */
+.contenedor .productos .node {
+  background-image: url(../images/grafico2.jpg);
+  grid-row: 8/9;
+  grid-column: 1/3;
+}
+
+@media only screen and (min-width: 768px) {
+  /* line 139, scss/style.scss */
+  .contenedor .productos .node {
+    grid-row: 5/6;
+    grid-column: 2/4;
+  }
+}
+
+/* line 154, scss/style.scss */
+.footer {
+  background: #89119D;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+
+/* line 158, scss/style.scss */
+.footer p {
+  text-align: center;
+  font-family: "Staatliches", cursive;
+  font-size: 2.2rem;
+}
+
+/* line 169, scss/style.scss */
+.nosotros .nosotros_info {
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+}
+
+@media only screen and (min-width: 768px) {
+  /* line 169, scss/style.scss */
+  .nosotros .nosotros_info {
+    grid-template-columns: repeat(2, 1fr);
+    -webkit-column-gap: 2rem;
+    -moz-column-gap: 2rem;
+    column-gap: 2rem;
+  }
+}
+
+/* line 176, scss/style.scss */
+.nosotros .nosotros_info .nosotros_info_texto {
+  padding: 0 2rem;
+}
+
+@media only screen and (min-width: 768px) {
+  /* line 176, scss/style.scss */
+  .nosotros .nosotros_info .nosotros_info_texto {
+    padding: 0;
+  }
+}
+
+/* line 181, scss/style.scss */
+.nosotros .nosotros_info .nosotros_info_texto p {
+  text-align: justify;
+}
+
+/* line 185, scss/style.scss */
+.nosotros .nosotros_info .nosotros_info_imagen {
+  grid-row: 1/2;
+}
+
+@media only screen and (min-width: 768px) {
+  /* line 185, scss/style.scss */
+  .nosotros .nosotros_info .nosotros_info_imagen {
+    grid-column: 2/3;
+  }
+}
+
+/* line 195, scss/style.scss */
+.contenedor .comprar .comprar_bloques {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+@media only screen and (min-width: 768px) {
+  /* line 195, scss/style.scss */
+  .contenedor .comprar .comprar_bloques {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* line 202, scss/style.scss */
+.contenedor .comprar .comprar_bloques .bloque {
+  text-align: center;
+}
+
+/* line 204, scss/style.scss */
+.contenedor .comprar .comprar_bloques .bloque h3 {
+  margin: 0;
+}
+
+/* line 207, scss/style.scss */
+.contenedor .comprar .comprar_bloques .bloque p {
+  padding: 0 2rem;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  /* line 217, scss/style.scss */
+  .compra {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    -webkit-column-gap: 2rem;
+    -moz-column-gap: 2rem;
+    column-gap: 2rem;
+  }
+}
+
+/* line 224, scss/style.scss */
+.compra .compra_contenido p {
+  padding: 0 2rem;
+  text-align: justify;
+}
+
+@media only screen and (min-width: 768px) {
+  /* line 224, scss/style.scss */
+  .compra .compra_contenido p {
+    padding: 0;
+  }
+}
+
+/* line 231, scss/style.scss */
+.compra .compra_contenido .formulario {
+  padding: 0 2rem;
+  gap: 2rem;
+}
+
+@media only screen and (min-width: 480px) {
+  /* line 231, scss/style.scss */
+  .compra .compra_contenido .formulario {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  /* line 231, scss/style.scss */
+  .compra .compra_contenido .formulario {
+    padding: 0;
+  }
+}
+
+/* line 241, scss/style.scss */
+.compra .compra_contenido .formulario .formulario_dato {
+  border: 1rem solid #89119D;
+  background: transparent;
+  color: #FFF;
+  font-size: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 1rem;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+@media only screen and (min-width: 480px) {
+  /* line 241, scss/style.scss */
+  .compra .compra_contenido .formulario .formulario_dato {
+    margin-bottom: 0;
+  }
+}
+
+/* line 254, scss/style.scss */
+.compra .compra_contenido .formulario .formulario_boton {
+  background: #FFCE00;
+  border: none;
+  font-size: 2rem;
+  font-family: "Staatliches", cursive;
+  padding: 2rem;
+  width: 100%;
+  grid-column: 1/3;
+  -webkit-transition: background .3s ease;
+  transition: background .3s ease;
+}
+
+/* line 265, scss/style.scss */
+.compra .compra_contenido .formulario .formulario_boton:hover {
+  cursor: pointer;
+  background: #e9bb02;
+}
